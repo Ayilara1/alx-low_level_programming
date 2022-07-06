@@ -1,4 +1,3 @@
-Bytes
 #include <stdio.h>
 
 /**
