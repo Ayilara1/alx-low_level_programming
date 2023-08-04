@@ -3,7 +3,8 @@
 
 int main(void)
 {
-    int number;
+ 	int get_endianness(void);
+     	int number;
 
     number = get_endianness();
     if (number != 0)
