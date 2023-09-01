@@ -28,20 +28,20 @@ unsigned int _strlen(const char *s)
  * @b: string to convert
  * Return: unsigned decimal number
  */
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *a)
 {
 	int i;
 	unsigned int result, tmp, expo;
 
-	if (!b)
+	if (!a)
 		return (0);
 	result = tmp = 0;
 	expo = 1;
-	for (i = _strlen(b) - 1; b[i]; i--, expo *= 2)
+	for (i = _strlen(a) - 1; a[i]; i--, expo *= 2)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (a[i] != '0' && a[i] != '1')
 			return (0);
-		tmp = _stoi(b[i]);
+		tmp = _stoi(a[i]);
 		result += tmp * expo;
 	}
 	return (result);
